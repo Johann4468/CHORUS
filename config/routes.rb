@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'instrument/index'
+  get 'instrument/show'
   devise_for :users
   root to: "pages#home"
 
