@@ -14,3 +14,14 @@
     width: 300px;
   }
 }
+
+.container img{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 5 rgb(230, 230, 230);
+  display: inline-block;
+  text-align: center;
+
+}

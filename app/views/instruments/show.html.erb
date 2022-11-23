@@ -1,7 +1,47 @@
-<h1>Instruments#show</h1>
-<h2>Category: <%= @instrument.category %></h2>
-<p><%= @instrument.photo %></p>
-<p>Brand: <%= @instrument.brand %></p>
-<p>Model: <%= @instrument.model %></p>
-<p>Color: <%= @instrument.color %></p>
-<p>Daily rate :<%= @instrument.price_per_day %>€</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Page d'acceuil</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../assets/stylesheets/application.scss">
+</head>
+  <!-- code a Hero / Banner section -->
+  <div class="banner">
+    <div class="my-container">
+      <h1><%=@instrument.brand.capitalize%> <%= @instrument.model %></h1>
+      <p></p>
+
+    </div>
+  </div>
+
+  <!-- code a "How it works" section -->
+  <div class="my-container">
+    <div class="my-card2">
+      <%= image_tag @instrument.photo %>
+      <p>Magnificent <%= @instrument.color %> <%=@instrument.brand.capitalize%> <%= @instrument.model %></p>
+      <p>Made in <%= @instrument.year %>  and located in <strong><%= @instrument.location %></strong>
+      it will be the greatest companion for your gigs!!</p>
+      <br>
+      <h4><%= @instrument.price_per_day %>€/day</h4>
+     <a class="mybtn-primary" href="#">Rent?</a>
+    </div>
+    </div>
+  </div>
+
+  <!-- code a footer -->
+  <div class="footer">
+    <div class="links">
+      <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-fw fa-github"></i></a>
+      <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      <p> Copyrigth : all reserved for musician and user  </p>
+      <p> For Us by Us </p>
+    </div>
+  </div>
+
+</body>
+</html>
