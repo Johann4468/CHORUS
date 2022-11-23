@@ -10,3 +10,61 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// import sylvain
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700');
+@import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
+
+/* Custom designs */
+@import url(components/banner.css);
+@import url(components/buttons.css);
+@import url(components/cards.css);
+@import url(components/container.css);
+@import url(components/footer.css);
+
+#searchbar {
+  position:relative;
+  width:1040px;
+  height:auto;
+}
+
+
+
+.formulaire{
+  display:inline-block;
+  padding: 20px;
+}
+
+.formulaire .champ {
+  width:600px;
+   height:35px;
+   border-radius: 10px;
+  }
+
+.formulaire .bouton {
+  background-image: url(images/searchbar_button.png);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border-radius: 40%;
+}
+
+/* Utilities */
+body {
+  margin: 0;
+  font-family: Open Sans;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
