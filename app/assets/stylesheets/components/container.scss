@@ -24,4 +24,22 @@
   display: inline-block;
   text-align: center;
 
+.my-container h2,h3,h4{
+  font-weight: bold;
+  font-size: 16px;
+}
+.my-container p{
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.my-container h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+
+.my-container a{
+  text-decoration: none;
+  color: black;
 }
