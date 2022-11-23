@@ -18,15 +18,49 @@
   </div>
 
   <!-- code a "How it works" section -->
-  <div class="my-container">
-    <div class="my-card2">
+  <div class="my-container2">
+    <div class="my-cards">
+    <div class="my-card">
       <%= image_tag @instrument.photo %>
+      <h4><%= @instrument.brand.upcase %> <%= @instrument.model.capitalize %></h4>
       <p>Magnificent <%= @instrument.color %> <%=@instrument.brand.capitalize%> <%= @instrument.model %></p>
       <p>Made in <%= @instrument.year %>  and located in <strong><%= @instrument.location %></strong>
       it will be the greatest companion for your gigs!!</p>
       <br>
       <h4><%= @instrument.price_per_day %>€/day</h4>
      <a class="mybtn-primary" href="#">Rent?</a>
+    </div>
+    <div class="my-card">
+    <form>
+								<div class="form-group">
+									<span class="form-label">Message</span>
+									<input class="form-control" type="text" placeholder="Enter a destination or hotel name">
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Début</span>
+											<input class="form-control" type="date" required>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Fin</span>
+											<input class="form-control" type="date" required>
+										</div>
+									</div>
+                  <>
+                  <div class="form-group" style="width: 100%" margin-top="40px" ><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="30" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=place%20royale+(Nantes)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>
+
+
+								</div>
+
+								</div>
+
+							</form>
+    </div>
+
+
     </div>
     </div>
   </div>

@@ -63,11 +63,21 @@
 
 .my-card2 img {
   width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 40px;
 }
 
 
 .my-card2 p {
   opacity: .5;
+  text-align: justify;
+}
+
+.my-card2 h4{
+  text-align: justify;
+  font-size: 24px;
 }
 
 .my-card2 {
@@ -79,6 +89,7 @@
   border: 1px solid rgb(230,230,230);
   background-color: white;
   margin: auto;
+
 }
 
 
