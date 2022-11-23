@@ -21,7 +21,7 @@
     <div class="my-cards">
 
         <% @instruments.each do |instrument| %>
-          <a href="#">
+          <%= link_to instrument_path(instrument), class: "mybtn123" do %>
           <div class="my-card">
           <%= image_tag instrument.photo %>
           <h4> <%= instrument.brand.upcase %> <%= instrument.model.capitalize %> </h4>
@@ -30,7 +30,7 @@
           <p><%= instrument.location.capitalize%></p>
           <h2><%= instrument.price_per_day %>€ </h2>
           </div>
-          </a>
+          <% end %>
         <% end %>
 
         <div class="my-card">
