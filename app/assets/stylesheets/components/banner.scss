@@ -15,7 +15,7 @@
 }
 
 .banner {
-  background: rgba(0, 0, 0, 0.7) url("../../images/background2.png");
+  background: rgba(0, 0, 0, 0.7) asset-url("background2.png");
   background-position: center;
   background-blend-mode: darken;
 }

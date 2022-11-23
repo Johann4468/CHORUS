@@ -1,0 +1,25 @@
+#searchbar {
+  position:relative;
+  width:1040px;
+  height:auto;
+}
+
+.formulaire{
+  display:inline-block;
+  padding: 20px;
+}
+
+.formulaire .champ {
+  width:600px;
+   height:35px;
+   border-radius: 10px;
+  }
+
+.formulaire .bouton {
+  background-image: url(images/searchbar_button.png);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border-radius: 40%;
+}

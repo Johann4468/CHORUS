@@ -1,21 +1,22 @@
-.card img {
+.my-card img {
   width: 150px;
 }
 
-.card p {
+.my-card p {
   opacity: .5;
 }
 
-.card {
+.my-card {
   width: 200px;
   border-radius: 3px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
   padding: 20px;
   border: 1px solid rgb(230,230,230);
+  background-color: white;
 }
 
-.cards {
+.my-cards {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
@@ -23,13 +24,13 @@
 }
 
 @media(max-width: 900px) {
-  .card {
+  .my-card {
     margin-bottom: 15px;
   }
 }
 
 @media(max-width: 500px) {
-  .cards {
+  .my-cards {
     justify-content: space-around;
   }
 }

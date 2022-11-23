@@ -10,7 +10,7 @@
 </head>
   <!-- code a Hero / Banner section -->
   <div class="banner">
-    <div class="container">
+    <div class="my-container">
       <h1>CHORUS</h1>
       <p></p>
       <a class="mybtn-primary" href="#">Se connecter</a></br>
@@ -19,24 +19,24 @@
   </div>
 
   <!-- code a "How it works" section -->
-  <div class="container">
+  <div class="my-container">
     <h2 class="text-center">Comment ca marche ? </h2>
-    <div class="cards">
+    <div class="my-cards">
 
-      <div class="card">
-        <img src="../../assets/images/apply.jpg" alt="une photo de guitare">
+      <div class="my-card">
+        <%= image_tag "apply.jpg", alt: "une photo de guitare" %>
         <h4> Vous cherchez à louer un instrument  </h4>
         <p> Nos utilisateurs ont plusieurs instruments de musique mis en location, nous vous offrons une plateforme pour louer votre matériel de musique en toute sécurité entre particuliers</p>
       </div>
 
-      <div class="card">
-        <img src="../../assets/images/violin.jpg" alt="une photo de violon">
+      <div class="my-card">
+        <%= image_tag "violin.jpg", alt: "une photo de violon" %>
         <h4>Vous avez un instrument à mettre en location </h4>
         <p>Grace à nos utilisateurs quotidiens, vos instruments bénéficierons d'une visibilité absolue afin qu'ils puissent etre rapidement loué par nos utilisateurs</p>
       </div>
 
-      <div class="card">
-        <img src="../../assets/images/p.jpg" alt="une photo avec un echange d'argent">
+      <div class="my-card">
+        <%= image_tag "p.jpg", alt: "une photo avec un echange d'argent" %>
         <h4>Nous vous mettons en relation</h4>
         <p>Nous vous mettons en relation avec le propriétaire de la guitare et le paiement reste entre particulier afin de sécurisé l'echange. </p>
       </div>

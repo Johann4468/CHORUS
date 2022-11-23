@@ -1,16 +1,16 @@
-.container {
+.my-container {
   width: 900px;
   margin: auto;
 }
 
 @media(max-width: 900px) {
-  .container {
+  .my-container {
     width: 500px;
   }
 }
 
 @media(max-width: 500px) {
-  .container {
+  .my-container {
     width: 300px;
   }
 }
