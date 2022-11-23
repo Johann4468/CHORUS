@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 160px 0;
+  padding: 60px 0;
 }
 
 .banner h1 {
@@ -15,7 +15,7 @@
 }
 
 .banner {
-  background: rgba(0, 0, 0, 0.5) asset-url("background2.png");
+  background: rgba(0, 0, 0, 0.7) asset-url("background2.png");
   background-position: center;
   background-blend-mode: darken;
 }
