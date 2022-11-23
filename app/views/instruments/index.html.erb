@@ -1,7 +1,58 @@
-<h1>Instruments#index</h1>
-<p>Find me in app/views/instrument/index.html.erb</p>
-<ul>
-  <% @instruments.each do |instrument| %>
-    <li><%= instrument.category %></li>
-  <% end %>
-</ul>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chorus - Nos instruments</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../assets/stylesheets/application.scss">
+</head>
+  <!-- code a Hero / Banner section -->
+  <div class="banner">
+    <div class="my-container">
+      <h1>NOS INSTRUMENTS</h1>
+    </div>
+  </div>
+
+  <!-- code a "How it works" section -->
+  <div class="my-container">
+    <div class="my-cards">
+
+        <% @instruments.each do |instrument| %>
+          <a href="#">
+          <div class="my-card">
+          <%= image_tag instrument.photo %>
+          <h4> <%= instrument.brand.upcase %> <%= instrument.model.capitalize %> </h4>
+          <h4><%= instrument.year%></h4>
+          <p><%= instrument.category.capitalize  %></p>
+          <p><%= instrument.location.capitalize%></p>
+          <h2><%= instrument.price_per_day %>€ </h2>
+          </div>
+          </a>
+        <% end %>
+
+        <div class="my-card">
+        <%= image_tag "p.jpg", alt: "ajouter un instrument" %>
+        <h4>Ajouter un instrument</h4>
+        <p>Ajouter ici un instrument de musique pour le louer a un particulier </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- code a footer -->
+  <div class="footer">
+    <div class="links">
+      <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-fw fa-github"></i></a>
+      <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      <p> Copyrigth : all reserved for musician and user  </p>
+      <p> For Us by Us </p>
+    </div>
+  </div>
+
+</body>
+</html>
