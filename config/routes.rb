@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+
   get 'rentals/create'
   get 'rentals/new'
   get 'instrument/index'
   get 'instrument/show'
+
   devise_for :users
   root to: "pages#home"
 
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
   resource :profile, only: %i[show]
 
   namespace :owner do
-    resources :instruments, only: %i[new create]
+    resources :instruments, only: %i[new create index]
 
     resources :rentals, only: [] do
       member do
