@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rentals/create'
+  get 'rentals/new'
   get 'instrument/index'
   get 'instrument/show'
   devise_for :users
