@@ -29,6 +29,12 @@
       <h4><%= @instrument.price_per_day %>€/day</h4>
     </div>
     <div class="my-card3">
+    <%= simple_form_for @rental do |f| %>
+      <%= f.input :message_to_owner, label: 'Message pour le propriétaire', as: :text %>
+      <%= f.input :start_date, label: 'Date de début', as: :date %>
+      <%= f.input :end_date, label: 'Date de fin', as: :date %>
+      <%= f.button :submit %>
+    <% end %>
     <form>
 								<div class="form-group">
 									<span class="form-label">Message pour le propriétaire</span>
