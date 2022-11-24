@@ -20,47 +20,23 @@
   <!-- code a "How it works" section -->
   <div class="my-container2">
     <div class="my-cards">
-    <div class="my-card3">
-      <%= image_tag @instrument.photo %>
-      <h4><%= @instrument.brand.upcase %> <%= @instrument.model.capitalize %></h4>
-      <p> <%= @instrument.color %> </p>
-      <p style="text-align: justify"> <%= @instrument.description %> </p>
-      <br>
-      <h4><%= @instrument.price_per_day %>€/day</h4>
-    </div>
-    <div class="my-card3">
-
-    <form>
-								<div class="form-group">
-									<span class="form-label">Message pour le propriétaire</span>
-									<input class="form-control" type="text" placeholder="Message pour le propriétaire ...">
-								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Date de Début</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group marg-bottom">
-											<span class="form-label">Date de fin</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-
-                  <div class="form-group" style="width: 100%" margin-top="40px" ><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="30" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=magasin%20de%20musique(<%=@instrument.location%>)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>
-                  <a href="#">Rent</a>
-
-								</div>
-
-								</div>
-
-							</form>
-    </div>
-
-
-    </div>
+      <div class="my-card3">
+        <%= image_tag @instrument.photo %>
+        <h4><%= @instrument.brand.upcase %> <%= @instrument.model.capitalize %></h4>
+        <p> <%= @instrument.color %> </p>
+        <p style="text-align: justify">Fabriqué en <%= @instrument.year %> ce(tte) <%= @instrument.category %> est disponible pour la location au prix de <%= @instrument.price_per_day %> par jour</p>
+        <br>
+        <h4><%= @instrument.price_per_day %>€/day</h4>
+      </div>
+      <div class="my-card3">
+        <%= simple_form_for [@instrument, @rental] do |f| %>
+          <%= f.input :message_to_owner, label: 'Message pour le propriétaire', placeholder: 'Entrez votre texte', as: :text %>
+          <%= f.input :start_date, html5: true, label: 'Date de début', as: :date %>
+          <%= f.input :end_date, html5: true, label: 'Date de fin', as: :date %>
+          <div class="form-group" style="width: 100%" margin-top="40px" ><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="30" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=magasin%20de%20musique(<%=@instrument.location%>)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>
+          <%= f.button :submit,  'Louer', class: 'mybtn-primary'  %>
+        <% end %>
+      </div>
     </div>
   </div>
 
