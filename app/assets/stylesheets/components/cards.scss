@@ -105,3 +105,47 @@
     margin-bottom: 15px;
   }
 }
+
+
+
+// card 3 pour la show
+
+
+.my-card3 img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+
+.my-card3 p {
+  opacity: .5;
+}
+
+.my-card3 {
+  width: 600px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+  background-color: white;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.my-card3 a {
+    display: inline-block;
+    background-color: #dda11e;
+    padding: 16px 26px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.marg-bottom {
+  margin-bottom: 30px;
+}
