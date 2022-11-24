@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chorus - mes reservations</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../assets/stylesheets/application.scss">
+</head>
+  <!-- code a Hero / Banner section -->
+  <div class="banner">
+    <div class="my-container">
+      <h1>MES reservations</h1>
+    </div>
+  </div>
+
+  <!-- code a "How it works" section -->
+  <div class="my-container">
+    <div class="my-cards">
+
+        <% @rentals.each do |rental| %>
+          <%= link_to owner_rentals_path(rental), class: "mybtn123" do %>
+            <div class="my-card">
+           <%= rental.total_price  %>
+            </div>
+          <% end %>
+        <% end %>
+
+
+    </div>
+  </div>
+
+  <!-- code a footer -->
+  <div class="footer">
+    <div class="links">
+      <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-fw fa-github"></i></a>
+      <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      <p> Un site internet réalisé par des etudiant du @wagon Fait par nous pour nous </p>
+    </div>
+  </div>
+
+</body>
+</html>

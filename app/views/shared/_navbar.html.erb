@@ -19,8 +19,8 @@
             <%= image_tag "https://oasys.ch/wp-content/uploads/2019/03/photo-avatar-profil.png  ", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profil", "#", class: "dropdown-item" %>
-              <%= link_to "Mes reservation", "#", class: "dropdown-item" %>
-              <%= link_to "Mes instruments", "#", class: "dropdown-item" %>
+              <%= link_to "Mes reservation", owner_rentals_path, class: "dropdown-item" %>
+              <%= link_to "Mes instruments", "/owner/instruments", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

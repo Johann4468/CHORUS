@@ -25,9 +25,9 @@
         <%= image_tag @instrument.photo %>
         <h4><%= @instrument.brand.upcase %> <%= @instrument.model.capitalize %></h4>
         <p> <%= @instrument.color %> </p>
-        <p style="text-align: justify">Fabriqué en <%= @instrument.year %> ce(tte) <%= @instrument.category %> est disponible pour la location au prix de <%= @instrument.price_per_day %> par jour</p>
+        <p><%= @instrument.description %></p>
         <br>
-        <h4><%= @instrument.price_per_day %>€/day</h4>
+        <h4><%= @instrument.price_per_day %>€/jour</h4>
       </div>
       <div class="my-card3">
         <%= simple_form_for [@instrument, @rental] do |f| %>
