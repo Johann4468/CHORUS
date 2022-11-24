@@ -5,5 +5,6 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
+    @rental = Rental.new
   end
 end
