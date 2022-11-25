@@ -11,9 +11,7 @@
   <!-- code a Hero / Banner section -->
   <div class="banner">
     <div class="my-container">
-
-      <p></p>
-
+      <h1> Rerservation pour mes instruments </h1>
     </div>
   </div>
 
@@ -29,12 +27,13 @@
           <p style="text-align: justify"><%= rental.message_to_owner  %></p>
           <h4><%= rental.acceptation %>  </h4>
 
-
+        <% if rental.acceptation == "EN-ATTENTE" %>
         <tr class="ulbtn">
           <td><%= button_to "valider", accept_owner_rental_path(rental),class: "mybtn-accept" , method: :patch %></td>
           </br>
           <td><%= button_to "refuser", refuse_owner_rental_path(rental),class: "mybtn-refuse" , method: :patch %></td>
         </tr>
+        <% end %>
       </div>
           <% end  %>
 
