@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :instruments, only: %i[index show] do
-    resources :rentals, only: %i[new create index]
+    resources :rentals, only: %i[new create]
   end
-
+  resources :rentals, only: :index
   resource :profile, only: %i[show]
 
   namespace :owner do
