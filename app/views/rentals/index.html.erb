@@ -12,7 +12,7 @@
   <!-- code a Hero / Banner section -->
   <div class="banner">
     <div class="my-container">
-      <h1>MES reservations</h1>
+      <h1>Mes demandes de reservation</h1>
     </div>
   </div>
 
@@ -22,11 +22,18 @@
 
         <% @rentals.each do |rental| %>
           <%= link_to owner_rentals_path(rental), class: "mybtn123" do %>
-            <div class="my-card">
-           <%= rental.total_price  %>
-            </div>
+
+      <div class="my-card">
+          <%= image_tag(rental.instrument.photo)%>
+          <h4><%= rental.instrument.brand.upcase  %> <%= rental.instrument.model.capitalize  %></h4>
+          Prix total de la reservation :<h4> <%= rental.total_price%> €</h4></br>
+          <p style="text-align: justify"><%= rental.message_to_owner%></p>
+      </div>
           <% end %>
         <% end %>
+
+
+
 
 
     </div>
