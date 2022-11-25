@@ -21,16 +21,20 @@
   <div class="my-container">
     <div class="my-cards">
 
-          <%   @my_rentals.each do |rental| %>
+          <% @my_rentals.each do |rental| %>
       <div class="my-card">
           <%= image_tag(rental.instrument.photo)%>
           <h4><%= rental.instrument.brand.upcase  %> <%= rental.instrument.model.capitalize  %></h4>
           Prix total de la reservation :<h4> <%= rental.total_price  %> €</h4></br>
           <p style="text-align: justify"><%= rental.message_to_owner  %></p>
-          <%= rental.acceptation %>
+          <h4><%= rental.acceptation %>  </h4>
 
-          <%= button_to "Accepter", accept_owner_rental_path(rental), method: :patch %>
-          <%= button_to "Refuser", refuse_owner_rental_path(rental), method: :patch %>
+
+        <tr class="ulbtn">
+          <td><%= button_to "valider", accept_owner_rental_path(rental),class: "mybtn-accept" , method: :patch %></td>
+          </br>
+          <td><%= button_to "refuser", refuse_owner_rental_path(rental),class: "mybtn-refuse" , method: :patch %></td>
+        </tr>
       </div>
           <% end  %>
 

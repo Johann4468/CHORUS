@@ -8,13 +8,13 @@ class Owner::RentalsController < ApplicationController
 
   def accept
     @rental = Rental.find(params[:id])
-    @rental.update(acceptation: 'accepted')
+    @rental.update(acceptation: 'ACCEPTEE')
     redirect_to owner_rentals_path
   end
 
   def refuse
     @rental = Rental.find(params[:id])
-    @rental.update(acceptation: 'refused')
+    @rental.update(acceptation: 'REFUSEE')
     redirect_to owner_rentals_path
   end
 end

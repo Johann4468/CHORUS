@@ -10,7 +10,7 @@ class RentalsController < ApplicationController
     @rental.instrument = @instrument
     calculate_days
     @rental.total_price = calculate_price
-    @rental.acceptation = "pending"
+    @rental.acceptation = "EN-ATTENTE"
 
     if @rental.save
       redirect_to '/instruments/:instrument_id/rentals', notice: 'Your rental was successfully created!'
